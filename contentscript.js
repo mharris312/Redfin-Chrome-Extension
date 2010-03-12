@@ -19,6 +19,16 @@ function AddPropertyDetail(name, valueHtml) {
     '</tr>');
 };
 
+// Adds the given label/value pair to the middle column of the public
+// facts panel lower in the page.
+function AddPublicData(name, valueHtml) {
+  $('#public_data .property-details:nth-child(2)>tbody').append(
+    '<tr>' +
+    '<td class="property_detail_label">' + name + ':</td>' +
+    '<td class="property_detail_value">' + valueHtml + '</td>' +
+    '</tr>');
+};
+
 function AddWalkscore() {
   // The Walkscore API would give us the score directly, but we'd need
   // to apply for an API key (which may be denied), and we'd need to
@@ -39,7 +49,7 @@ function AddKingCountyParcelViewer() {
     if (/\d{10}/.test(parcel)) {
       var url = 'http://www5.kingcounty.gov/ParcelViewer?PIN=' + parcel;
       var link = '<a href="' + url + '" target="_new">' + parcel + '</a>';
-      AddPropertyDetail('Parcel Viewer', link);
+      AddPublicData('Parcel Viewer', link);
     }
   }
 };
@@ -53,7 +63,7 @@ function AddKirklandPermits() {
       var formatted_parcel = parcel.replace(/(\d{6})(\d{4})/, '$1-$2');
       var url = 'http://www.kirklandpermits.net/tm_bin/tmw_cmd.pl?tmw_cmd=ParcelViewParcel&shl_prc_parcel_no=' + formatted_parcel;
       var link = '<a href="' + url + '" target="_new">' + 'Show Permits</a>';
-      AddPropertyDetail('Kirkland Permits', link);
+      AddPublicData('Kirkland Permits', link);
     }
   }
 };

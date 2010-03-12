@@ -1,7 +1,7 @@
 {
   "name": "Unofficial Redfin Extension",
   "version": "1.0",
-  "description": "Adds missing links to Redfin listings.",
+  "description": "Adds missing links to Redfin property pages.",
   "content_scripts": [
     {
       "matches": ["http://www.redfin.com/*"],

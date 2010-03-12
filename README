@@ -1,0 +1,29 @@
+Redfin Chrome Extension
+
+This extension was not created or endorsed by Redfin.
+
+This Chrome extension adds some useful links to Redfin property pages.
+I wrote this because I found myself visiting these sites for houses
+that I was seriously interested in.  Having them a click away was very
+useful for me, and by making this extension publicly available, I
+might encourage Redfin to add the links to the site.  I don't intend
+that everyone who visits Redfin should have to install this extension.
+For this reason, I have not published a packaged CRX file of this
+extension.
+
+Right now it adds the following links:
+
+  in the property details panel:
+
+    a link to Walkscore for the property
+
+  in the public data panel:
+
+    a link to the King County, Washington, Parcel Viewer (if relevant)
+
+    a link to the Kirkland, Washington, Permits site (if relevant)
+
+To install this extension, download the source, go to the Extensions
+page in Chrome, expand the Developer Mode panel, and click "Pack
+extension..."  Specify the source directory as the extension root
+directory.  You don't need to specify a private key file.
